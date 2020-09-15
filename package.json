@@ -1,0 +1,36 @@
+{
+  "name": "geometric-figures",
+  "version": "1.0.0",
+  "description": "This is a web page of geometric figures for a resolve ecuacions and areas",
+  "main": "index.js",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Richi-Mi/geometric-figures.git"
+  },
+  "keywords": [
+    "geometric",
+    "figures",
+    "areas",
+    "richi",
+    "triangle",
+    "cicle",
+    "square"
+  ],
+  "author": "Jose Ricardo Mendoza Castañeda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Richi-Mi/geometric-figures/issues"
+  },
+  "homepage": "https://github.com/Richi-Mi/geometric-figures#readme"
+}
