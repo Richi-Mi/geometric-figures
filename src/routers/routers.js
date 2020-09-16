@@ -14,9 +14,6 @@ router.get('/Figuras', (require, response) => {
 router.get('/Areas-y-perimetros', (require, response) => {
     response.sendFile(`${dirFile}Areas.html`)
 })
-router.get('/contact', (require, response) => {
-    response.sendFile(`${dirFile}contact.html`)
-})
 router.get('/about', (request, response) => {
     response.sendFile(`${dirFile}about.html`)
 })
