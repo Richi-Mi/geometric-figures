@@ -1,1 +1,2 @@
 # Sitio Web (Figuras Geometricas)
+Este Sitio Web lo hice como proyecto para mi portafolio personal. Y por desgracia soy Junior y estoy aprendiendo asi que espero les gustey si encuentran un bug haganmelo saber por una issue
