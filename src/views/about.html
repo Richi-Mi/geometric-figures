@@ -9,18 +9,23 @@
     <meta name="theme-color" content="blue">
     <title> Figuras Geometricas </title>
     <link rel="stylesheet" href="/CSS/style-nav.css">
+   <!-- Font Awesome -->
+   <script src="https://kit.fontawesome.com/da275394da.js" crossorigin="anonymous"></script>
+   <!-- Icon -->
+   <link rel="shortcut icon" href="/img/cubes-solid.svg" type="image/x-icon">
 </head>
 <body>
     <nav class="nav">
         <div class="sections">
-            <a href="/"> Figuras Geometricas </a>
+            <a href="/"><i class="fas fa-cube"></i><span class="delete">  Figuras Geometricas  </span></a>
         </div>
-        <div class="sections">
-            <a href="/Figuras"> Figuras </a>
-            <a href="/Areas-y-perimetros"> Areas y Perimetros </a>
-            <a href="/contact"> Contacto </a>
-            <a href="/about"> Acerca De </a>
+        <div class="sections hidden" id="section">
+            <a href="/Figuras"><i class="fas fa-square"></i> Figuras </a>
+            <a href="/Areas-y-perimetros"><i class="fas fa-plus"></i> Areas </a>
+            <a href="#contact"><i class="far fa-id-badge"></i>  Contacto </a>
+            <a href="/about"><i class="far fa-question-circle"></i> Acerca De </a>
         </div>
+        <button class="button" id="btn-abrir"><i class="fas fa-bars"></i></button>
     </nav>
     <main class="main">
         <div class="card">
@@ -34,5 +39,6 @@
     <footer class="footer">
         <p class="p-footer">&copy; Copyright 2020 - Richi-Mi </p>
     </footer>
+    <script src="/JS/navbar.js"></script>
 </body>
 </html>

@@ -4,13 +4,13 @@ const path = require('path')
 const router = require('./routers/routers')
 const app = express()
 
-//routers
+//routers Usamos las rutas para crear paginas
 app.use(router)
 
 // --- Static Aqui usamos los archivos css y javascript
 app.use(express.static(path.join(__dirname, 'public')))
 
-// -- Port 
+// -- Port Lanzamos el servidor 
 app.listen(8080, () => {
     console.log(`Server on port 8080`)
 })
