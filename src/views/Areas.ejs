@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head')%>
+    <title> Figuras Geometricas </title>
+</head>
+<body>
+    <%- include('partials/navigation') %>
+    <main class="main">
+        <h1 class="title"> Saca el Area de Las Figuras </h1>
+        <div class="container-grid">
+            <div class="figuraAModificar">
+                <div class="figura"></div>
+            </div>
+            <aside class="aside">
+                <button class="button" id="btn-"> Square </button>
+                <button class="button" id="btn-"> Triangle </button>
+                <button class="button" id="btn-"> Rombo </button>
+                <button class="button" id="btn-"> Rectangle </button>
+                <button class="button" id="btn-"> Circle </button>
+                <button class="button" id="btn-"> Calculate </button>
+            </aside>
+            <section class="formula">
+                <div class="formula" id="formula"></div>
+            </section>
+        </div>
+    </main>
+    <%- include('partials/footer')%>
+</body>
+</html>

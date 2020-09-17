@@ -1,37 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="geometric figures geometria geometrico figuras square cuadrado triangle triangulo rombo rectangle rectangulo circle circulo">
-    <meta name="description" content="This is a proyect open source, I'm have a programer junior on Frontsd and Backend Like !">
-    <meta name="author" content="Richi-Mi">
-    <meta name="theme-color" content="blue">
+    <%- include('partials/head')%>
     <title> Home </title>
-    <link rel="stylesheet" href="/CSS/style-nav.css">
-    <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/da275394da.js" crossorigin="anonymous"></script>
-    <!-- Icon -->
-    <link rel="shortcut icon" href="/img/cubes-solid.svg" type="image/x-icon">
 </head>
 <body>
-    <nav class="nav">
-        <div class="sections">
-            <a href="/"><i class="fas fa-cube"></i><span class="delete">  Figuras Geometricas  </span></a>
-        </div>
-        <div class="sections hidden" id="section">
-            <a href="/Figuras"><i class="fas fa-square"></i> Figuras </a>
-            <a href="/Areas-y-perimetros"><i class="fas fa-plus"></i> Areas  </a>
-            <a href="#contact"><i class="far fa-id-badge"></i> Contacto </a>
-            <a href="/about"><i class="far fa-question-circle"></i> Acerca De </a>
-        </div>
-        <button class="button" id="btn-abrir"><i class="fas fa-bars"></i></button>
-    </nav>
+    <%- include('partials/navigation') %>
     <main class="main">
         <div class="banner">
+            <!-- <img src="" alt="banner">
+            <img src="" alt="banner">
+            <img src="" alt="banner"> -->
             <h2 class="title banner"> Aprende de Figuras Geometricas</h2>
             <button class="button"> Comenzar </button>
             <p class="p-banner"> Este boton lo enviara a la pagina web de Figuras para empezar su recorrido </p>
+            <span class="circle"></span>
+            <span class="circle"></span>
+            <span class="circle"></span>
         </div>
         <div class="container-grid">
             <div class="instrucions">
@@ -73,9 +58,6 @@
             </ul>
         </section>
     </main>
-    <footer class="footer">
-        <p class="p-footer">&copy; Copyright 2020 - Richi-Mi </p>
-    </footer>
-    <script src="/JS/navbar.js"></script>
+    <%- include('partials/footer')%>
 </body>
 </html>

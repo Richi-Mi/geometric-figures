@@ -11,6 +11,6 @@ app.use(router)
 app.use(express.static(path.join(__dirname, 'public')))
 
 // -- Port Lanzamos el servidor 
-app.listen(8080, () => {
-    console.log(`Server on port 8080`)
+app.listen(3000, () => {
+    console.log(`Server on port 3000`)
 })
