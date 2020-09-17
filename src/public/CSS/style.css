@@ -6,6 +6,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow-x: scroll;
 }
 /* content banner */
 .content-banner{
@@ -55,11 +56,17 @@
     background-color: #f00;
 }
 /* img */
+.img-banner{
+    width: 300vw;
+    height: 100%;
+    display: flex;
+}
 .banner .img{
+    position: relative;
     display: block;
     width: 100vw;
     height: 75vh;
-    z-index: -1;
+    z-index: 1;
     filter: contrast(2);
 }
 /* btn banner */
