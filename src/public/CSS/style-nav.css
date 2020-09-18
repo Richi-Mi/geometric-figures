@@ -1,12 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
 *{
     font-family: 'Chewy', cursive;
     box-sizing: border-box;
-    position: relative;
     --color: #fff;
+    position: relative;
 }
 button{
     cursor: pointer;
+}
+img{
+    max-width: 100%;
 }
 body, html{
     margin: 0;
@@ -85,11 +87,13 @@ body, html{
 }
 /*-- Footer --*/
 .footer{
+    background-color: #fff;
     width: 100%;
     text-align: center;
     letter-spacing: 2px;
     font-size: 1.3em;
     position: absolute;
+    bottom: 0;
 }
 /* Responsive Design */
 @media screen and (max-width: 411px){
