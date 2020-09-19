@@ -1,0 +1,138 @@
+/*_______________ Main and Title ________________-*/
+.main{
+    width: 80%;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0px 15px 85px -14px rgba(255,255,255,1);
+    padding: 1em;
+    border-radius: .8em;
+    margin-top: 2em;
+    margin-bottom: 6em;
+}
+.title{
+    font-family: 'Roboto', sans-serif;
+    border-bottom: 2px solid #000;
+    text-align: center;
+}
+/*_______________ container-grid ________________-*/
+.container-grid{
+    width: 100%;
+    height: 90vh;
+    background-color: #e0e0e0;
+    padding: .8em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "squareF squareF triangleF"
+                         "turbotF turbotF triangleF"
+                         "circleF rectangle rectangle";
+    gap: 1em
+}
+.figura{
+    background-color: #c7c7c7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+.figura.sqe{
+    grid-area: squareF;
+}
+.figura.sqe::before{
+    content: " Square ";
+}
+.figura.tge{
+    grid-area: triangleF;
+}
+.figura.tge::before{
+    content: " Triangle ";
+}
+.figura.trt{
+    grid-area:turbotF;
+}
+.figura.trt::before{
+    content: " Turbot ";
+}
+.figura.rct{
+    grid-area: rectangle;
+}
+.figura.rct::before{
+    content: " Rectangle ";
+}
+.figura.crcl{
+    grid-area: circleF;
+}
+.figura.crcl::before{
+    content: " Circle ";
+}
+.figura::before{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 25%;
+    font-size: 1.4em;
+    font-family: 'Roboto', 'Arial', sans-serif;
+    color: #fff;
+    text-align: center;
+    z-index: 100;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .75);
+    transform: translateY(100%);
+    transition: .6s transform cubic-bezier(0.895, 0.03, 0.685, 0.22);
+    clip-path: polygon(0 8%, 100% 0, 100% 100%, 0% 100%)
+}
+.figura:hover::before{
+    transform: translateY(0);
+}
+.fig{
+    position: relative;
+    z-index: 2;
+    background-color: rgb(88, 88, 88); 
+}
+.fig.square{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    width: 100px;
+    height: 100px;
+}
+.fig.triangle{
+    clip-path: polygon(50% 0, 50% 0, 100% 100%, 0% 100%);
+    width: 80%;
+    height: 80%;
+}
+.fig.rombo{
+    clip-path: polygon(50% 0, 100% 50%, 50% 97%, 0 50%);
+    width: 40%;
+    height: 90%;
+}
+.fig.rectangle{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    width: 80%;
+    height: 80%;
+}
+.fig.circle{
+    border-radius: 50%;
+    width: 40%;
+    height: 95%;
+}
+/*_______________________ btn __________________*/
+.btn-next{
+    cursor: pointer;
+    display: block;
+    border: 2px solid #000;
+    background-color: transparent;
+    color: #000;
+    padding: .5em;
+    text-decoration: none;
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
+}
+.btn-next i{
+    transition: .5s transform cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+.btn-next:hover i{
+    transform: translateX(100%);
+}
+@media screen and (max-width: 411px){
+    
+}

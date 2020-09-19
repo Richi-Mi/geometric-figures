@@ -1,5 +1,6 @@
 const button  = document.getElementById('btn-abrir')
 const section = document.getElementById('section')
+const contact = document.getElementById('contact')
 
 button.addEventListener('click', () => {
     if(section.classList.contains('active')){
@@ -10,4 +11,7 @@ button.addEventListener('click', () => {
         section.classList.add('active')
         button.style.backgroundColor = '#ffffffb3'
     }
+})
+contact.addEventListener('click', () => {
+    window.alert('Lo creo Jose Ricardo 24/09/2020')
 })

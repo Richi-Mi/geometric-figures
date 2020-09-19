@@ -4,6 +4,7 @@
 <head>
     <%- include('partials/head')%>
     <title> Figuras Geometricas </title>
+    <link rel="stylesheet" href="/CSS/style-figuras.css">
 </head>
 
 <body>
@@ -11,24 +12,30 @@
     <main class="main">
         <h1 class="title"> Figuras Geometricas y sus nombres </h1>
         <div class="container-grid">
-            <div class="figura">
-                <div class="square"></div>
+            <div class="figura sqe">
+                <div class="fig square"></div>
             </div>
-            <div class="figura">
-                <div class="triangle"></div>
+            <div class="figura tge">
+                <div class="fig triangle"></div>
             </div>
-            <div class="figura">
-                <div class="rombo"></div>
+            <div class="figura trt">
+                <div class="fig rombo"></div>
             </div>
-            <div class="figura">
-                <div class="rectangle"></div>
+            <div class="figura rct">
+                <div class="fig rectangle"></div>
             </div>
-            <div class="figura">
-                <div class="circle"></div>
+            <div class="figura crcl">
+                <div class="fig circle"></div>
             </div>
         </div>
+        <aside class="aside" id="buttons">
+            <button class="red"></button>
+            <button class="red"></button>
+            <button class="red"></button>
+            <button class="red"></button>
+        </aside>
         <h2 class="title"> Felicidades lo Completaste </h2>
-        <a href="/Areas-y-perimetros"> Siguiente Leccion </a>
+        <a href="/Areas-y-perimetros" class="btn-next"> Siguiente Leccion <i class="fas fa-arrow-right"></i></a>
     </main>
     <%- include('partials/footer')%>
 </body>
