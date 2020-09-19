@@ -79,7 +79,6 @@
     background-color: rgba(0, 0, 0, .75);
     transform: translateY(100%);
     transition: .6s transform cubic-bezier(0.895, 0.03, 0.685, 0.22);
-    clip-path: polygon(0 8%, 100% 0, 100% 100%, 0% 100%)
 }
 .figura:hover::before{
     transform: translateY(0);
@@ -87,7 +86,8 @@
 .fig{
     position: relative;
     z-index: 2;
-    background-color: rgb(88, 88, 88); 
+    background-color: #585858; 
+    transition: .4s background-color cubic-bezier(0.95, 0.05, 0.795, 0.035);
 }
 .fig.square{
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
@@ -114,6 +114,38 @@
     width: 40%;
     height: 95%;
 }
+/*_______________________ Aside ________________*/
+.aside{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    border: 2px solid #000;
+    padding: .7em;
+    margin: 1em 0;
+}
+.aside button{
+    flex: 1 1 20%;
+    height: 4em;
+    margin: 0 .6em;
+    border: none;
+    outline: none;
+    transition: .5s box-shadow ease-out;
+}
+.aside button:hover{
+    box-shadow: 0px 5px 20px 2px #181818;
+}
+.gris{
+    background-color: #585858;
+}
+.red{
+    background-color: #800000;
+}
+.blue{
+    background-color: #111077;
+}
+.green{
+    background-color: #035503;
+}
 /*_______________________ btn __________________*/
 .btn-next{
     cursor: pointer;
@@ -134,5 +166,28 @@
     transform: translateX(100%);
 }
 @media screen and (max-width: 411px){
-    
+    .container-grid{
+        grid-template-columns: 1fr;
+        grid-template-areas: "squareF"
+                             "triangleF"
+                             "triangleF"
+                             "triangleF"
+                             "turbotF"
+                             "turbotF"
+                             "rectangle"
+                             "rectangle"
+                             "circleF"
+                             "circleF";
+        gap: 1em
+    }
+    .aside{
+        flex-flow: column wrap;
+        height: 30vh;
+    }
+    .aside button{
+        margin: .2em 0;
+    }
+    .title{
+        font-size: 1.2em;
+    }
 }

@@ -102,7 +102,7 @@ body, html{
     }
     .button{
         display: block;
-        z-index: 120;
+        z-index: 10000;
     }
     .sections.hidden{
         position: absolute;
@@ -110,7 +110,7 @@ body, html{
         width: 70vw;
         height: 100vh;
         background-color: #ffffffb3;
-        z-index: 2;
+        z-index: 9000;
         top: 0;
         right: 0;
         display: flex;
