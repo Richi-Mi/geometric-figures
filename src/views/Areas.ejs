@@ -3,28 +3,33 @@
 <head>
     <%- include('partials/head')%>
     <title> Figuras Geometricas </title>
+    <link rel="stylesheet" href="/SCSS/style-Areas.css">
 </head>
-<body>
+<body id="body">
     <%- include('partials/navigation') %>
     <main class="main">
         <h1 class="title"> Saca el Area de Las Figuras </h1>
         <div class="container-grid">
             <div class="figuraAModificar">
-                <div class="figura"></div>
+                <div class="figura" id="FiguraModificar"></div>
             </div>
-            <aside class="aside">
-                <button class="button" id="btn-"> Square </button>
-                <button class="button" id="btn-"> Triangle </button>
-                <button class="button" id="btn-"> Rombo </button>
-                <button class="button" id="btn-"> Rectangle </button>
-                <button class="button" id="btn-"> Circle </button>
-                <button class="button" id="btn-"> Calculate </button>
+            <aside class="aside" id="aside">
+                <button class="button-aside" id="square"> Square </button>
+                <button class="button-aside" id="triangle"> Triangle </button>
+                <button class="button-aside" id="trop"> Rombo </button>
+                <button class="button-aside" id="rectangle"> Rectangle </button>
+                <button class="button-aside" id="circle"> Circle </button>
+                <button class="button-aside" id="calculate"> Calculate </button>
             </aside>
             <section class="formula">
-                <div class="formula" id="formula"></div>
+                <p class="form" id="formula"></p>
             </section>
+            <div class="resultado">
+                <p class="response" id="respuesta"></p>
+            </div>
         </div>
     </main>
     <%- include('partials/footer')%>
+    <script src="/JS/Areas.js"></script>
 </body>
 </html>

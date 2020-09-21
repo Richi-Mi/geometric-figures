@@ -1,0 +1,39 @@
+/Variables
+$colorPrincipal: #fff;
+$border: 2px solid #000;
+$Objet: (
+    primary: #f00,
+    second: #0f0,
+    three: #00f
+);
+@import "nombre del archivo";
+// Mixins
+@mixin style-button($display) {
+    display: $display;
+    cursor: pointer;
+    border: $border;
+    &:hover{
+        box-shadow: 0px 2px 30px 20px #999;
+    }
+    @media screen and (max-width: 400px){
+        background-color: $Objet;
+    }
+}
+//New Styles
+.body{
+    background-color: $colorPrincipal;
+    .main{
+        border: $border;
+        @debug type-of($colorPrincipal); //Imprime el tipo de dato
+        @debug $colorPrincipal; // Imprime el valor del color Principal
+        .button{
+            @include style-button(block);
+        }
+    }
+}
+//Bucles
+@for $i from 1 through 20{
+    .cols-#{$i} {
+        columns: 2;
+    }
+}

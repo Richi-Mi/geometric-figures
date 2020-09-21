@@ -1,0 +1,72 @@
+// Variables
+$fuente: 'Roboto', sans-serif;
+$borde: 2px solid #000;
+//Styles
+.main{
+    width: 90%;
+    margin: 3em auto;
+    background-color: #fff;
+    padding: .7em;
+    margin-bottom: 6em;
+    .title{
+        font-family: $fuente;
+        text-align: center;
+        border-bottom: $borde;
+    }
+}
+//Container- grid
+.container-grid{
+    width: 100%;
+    height: 70vh;
+    padding: 1em;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "Figura Figura  Figura aside"
+                         "Figura Figura Figura  aside"
+                         "Figura Figura  Figura aside"
+                         "Formula Formula Formula Resultado";
+    gap: 1em;
+    .figuraAModificar{
+        grid-area: Figura;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .figura{
+            width: 50%;
+            height: 200px;
+            background-color: #808080;
+            transition: .6s clip-path;
+        }
+    }
+    .aside{
+        grid-area: aside;
+    }
+    .formula{
+        grid-area: Formula;
+    }
+    .resultado{
+        grid-area: Resultado;
+    }
+    .figuraAModificar,
+    .aside,
+    .formula,
+    .resultado{
+        border: $borde;
+    }
+}
+// Figuras 
+.square{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+.triangle{
+    clip-path: polygon(50% 0, 50% 0, 100% 100%, 0% 100%);
+}
+.trop{
+    clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+}
+.rectangle{
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
+}
+.circle{
+    clip-path: circle(50% at 50% 50%);
+}
