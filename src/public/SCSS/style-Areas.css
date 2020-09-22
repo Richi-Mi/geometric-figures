@@ -8,6 +8,8 @@
 
 .main .title {
   font-family: "Roboto", sans-serif;
+  font-size: 3em;
+  text-align: center;
   text-align: center;
   border-bottom: 2px solid #000;
 }
@@ -30,20 +32,17 @@
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-area: Figura;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  justify-items: center;
 }
 
 .container-grid .figuraAModificar .figura {
-  width: 50%;
-  height: 200px;
   background-color: #808080;
   -webkit-transition: .6s clip-path;
   transition: .6s clip-path;
@@ -54,6 +53,35 @@
   -ms-grid-row-span: 3;
   -ms-grid-column: 4;
   grid-area: aside;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: .5em;
+}
+
+.container-grid .aside .button-aside {
+  border: 2px solid #000;
+  outline: none;
+  background-color: #fff;
+  font-size: 1em;
+  padding: .7em;
+  -webkit-transition: 0.2s letter-spacing cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.1s, 0.2s -webkit-box-shadow ease-out;
+  transition: 0.2s letter-spacing cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.1s, 0.2s -webkit-box-shadow ease-out;
+  transition: 0.2s box-shadow ease-out, 0.2s letter-spacing cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.1s;
+  transition: 0.2s box-shadow ease-out, 0.2s letter-spacing cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.1s, 0.2s -webkit-box-shadow ease-out;
+}
+
+.container-grid .aside .button-aside:hover {
+  -webkit-box-shadow: 0px 3px 15px -1px #999;
+          box-shadow: 0px 3px 15px -1px #999;
+  letter-spacing: 2px;
 }
 
 .container-grid .formula {
@@ -63,10 +91,29 @@
   grid-area: Formula;
 }
 
+.container-grid .formula p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
+  text-align: center;
+}
+
+.container-grid .formula p input {
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #000;
+}
+
 .container-grid .resultado {
   -ms-grid-row: 4;
   -ms-grid-column: 4;
   grid-area: Resultado;
+}
+
+.container-grid .resultado p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
+  text-align: center;
+  color: #f00;
 }
 
 .container-grid .figuraAModificar,
@@ -79,25 +126,35 @@
 .square {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
           clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  width: 200px;
+  height: 200px;
 }
 
 .triangle {
   -webkit-clip-path: polygon(50% 0, 50% 0, 100% 100%, 0% 100%);
           clip-path: polygon(50% 0, 50% 0, 100% 100%, 0% 100%);
+  width: 20%;
+  height: 80%;
 }
 
 .trop {
   -webkit-clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
           clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+  width: 50%;
+  height: 75%;
 }
 
 .rectangle {
   -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
           clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
+  width: 80%;
+  height: 80%;
 }
 
 .circle {
   -webkit-clip-path: circle(50% at 50% 50%);
           clip-path: circle(50% at 50% 50%);
+  width: 200px;
+  height: 200px;
 }
 /*# sourceMappingURL=style-Areas.css.map */

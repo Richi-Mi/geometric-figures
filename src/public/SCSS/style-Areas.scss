@@ -1,6 +1,16 @@
 // Variables
 $fuente: 'Roboto', sans-serif;
 $borde: 2px solid #000;
+//Mixins
+@mixin border ($border, $outline){
+    border: $border;
+    outline: $outline; 
+}
+@mixin Fuente ($font, $size){
+    font-family: $font;
+    font-size: $size;
+    text-align: center;
+}
 //Styles
 .main{
     width: 90%;
@@ -9,7 +19,7 @@ $borde: 2px solid #000;
     padding: .7em;
     margin-bottom: 6em;
     .title{
-        font-family: $fuente;
+        @include Fuente ($fuente, 3em);
         text-align: center;
         border-bottom: $borde;
     }
@@ -28,24 +38,49 @@ $borde: 2px solid #000;
     gap: 1em;
     .figuraAModificar{
         grid-area: Figura;
-        display: flex;
-        justify-content: center;
+        display: grid;
+        grid-template-columns: 1fr;
         align-items: center;
+        justify-items: center;
         .figura{
-            width: 50%;
-            height: 200px;
             background-color: #808080;
             transition: .6s clip-path;
         }
     }
     .aside{
         grid-area: aside;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-evenly;
+        padding: .5em;
+        .button-aside{
+            @include border (2px solid #000, none);
+            background-color: #fff;
+            font-size: 1em;
+            padding: .7em;
+            transition: .2s box-shadow ease-out, .2s letter-spacing cubic-bezier(0.175, 0.885, 0.32, 1.275) .1s;
+            &:hover{
+                box-shadow: 0px 3px 15px -1px #999;
+                letter-spacing: 2px;
+            }
+        }
     }
     .formula{
         grid-area: Formula;
+        p{
+            @include Fuente($fuente, 1em);
+            input{
+                @include border (none, none);
+                border-bottom: 2px solid #000;
+            }
+        }
     }
     .resultado{
         grid-area: Resultado;
+        p{
+            @include Fuente($fuente, 1em);
+            color: #f00;
+        }
     }
     .figuraAModificar,
     .aside,
@@ -57,16 +92,26 @@ $borde: 2px solid #000;
 // Figuras 
 .square{
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    width: 200px;
+    height: 200px;
 }
 .triangle{
     clip-path: polygon(50% 0, 50% 0, 100% 100%, 0% 100%);
+    width: 20%;
+    height: 80%;
 }
 .trop{
     clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+    width: 50%;
+    height: 75%;
 }
 .rectangle{
     clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
+    width: 80%;
+    height: 80%;
 }
 .circle{
     clip-path: circle(50% at 50% 50%);
+    width: 200px;
+    height: 200px;
 }
