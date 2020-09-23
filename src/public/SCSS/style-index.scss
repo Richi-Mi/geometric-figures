@@ -1,0 +1,109 @@
+//Variables
+$color: #fff;
+$border: 2px solid #fff;
+$fuente: 'Roboto', sans-serif;
+// Mixins 
+@mixin title ($size){
+    font-family: $fuente;
+    font-size: $size;
+    text-align: center;
+    border-bottom: $border;
+}
+@mixin children-grip {
+    border: $border;
+    padding: .6em;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.main{
+    color: $color;
+}
+.container-grid{
+    display: grid;
+    border: $border;
+    width: 90%;
+    margin: 2em auto;
+    padding: .8em;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas: "instruccions aside"
+                         "definicion aside";
+    gap: 1em;
+    .instrucions{
+        grid-area: instruccions;
+        .list-instruccions{
+            list-style: none;
+            padding: .4em;
+            border: $border;
+            background-color: rgba(0, 0, 0, 0.575);
+            li{
+                font-family: $fuente;
+                font-size: 1.1em;
+                text-align: center;
+            }
+        }
+    }
+    .definicion{
+        grid-area: definicion;
+        .p{
+            @include title(1.1em)
+        }
+        a{
+            display: block;
+            padding: .5em;
+            border: $border;
+            text-decoration: none;
+            @include title(1.1em);
+            color: #fff;
+            transition: .3s background-color, .3s letter-spacing .3s;
+            &:hover{
+                background-color: rgba(255, 255, 255, 0.363);
+                letter-spacing: 2px;
+            }
+        }
+    }
+    .redes-sociales{
+        grid-area: aside;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        a{
+            flex: 1 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            color: #fff;
+            font-family: $fuente;
+            position: relative;
+            z-index: 100;
+            transition: .2s letter-spacing;
+            i{
+                margin-right: 1em;
+            }
+            &:hover{
+                letter-spacing: 3px;
+            }
+        }
+        a::after{
+            content: "";
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-color: #800000;
+            transform: scale(0);
+            transition: .2s transform ease;
+        }
+        a:hover::after{
+            transform: scale(1);
+        }
+    }
+    .instrucions,
+    .definicion,
+    .redes-sociales{
+        @include children-grip();
+    }
+}
+.title{
+    @include title(2em)
+}
