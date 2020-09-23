@@ -26,7 +26,7 @@
   gap: 1em;
 }
 
-.container-grid .figuraAModificar {
+.figuraAModificar {
   -ms-grid-row: 1;
   -ms-grid-row-span: 3;
   -ms-grid-column: 1;
@@ -42,13 +42,13 @@
   justify-items: center;
 }
 
-.container-grid .figuraAModificar .figura {
+.figuraAModificar .figura {
   background-color: #808080;
-  -webkit-transition: .6s clip-path;
-  transition: .6s clip-path;
+  -webkit-transition: .6s clip-path ease-in-out .6s, .6s width ease-in, .6s height ease;
+  transition: .6s clip-path ease-in-out .6s, .6s width ease-in, .6s height ease;
 }
 
-.container-grid .aside {
+.aside {
   -ms-grid-row: 1;
   -ms-grid-row-span: 3;
   -ms-grid-column: 4;
@@ -66,7 +66,7 @@
   padding: .5em;
 }
 
-.container-grid .aside .button-aside {
+.aside .button-aside {
   border: 2px solid #000;
   outline: none;
   background-color: #fff;
@@ -78,48 +78,48 @@
   transition: 0.2s box-shadow ease-out, 0.2s letter-spacing cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.1s, 0.2s -webkit-box-shadow ease-out;
 }
 
-.container-grid .aside .button-aside:hover {
+.aside .button-aside:hover {
   -webkit-box-shadow: 0px 3px 15px -1px #999;
           box-shadow: 0px 3px 15px -1px #999;
   letter-spacing: 2px;
 }
 
-.container-grid .formula {
+.formula {
   -ms-grid-row: 4;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-area: Formula;
 }
 
-.container-grid .formula p {
+.formula p {
   font-family: "Roboto", sans-serif;
   font-size: 1em;
   text-align: center;
 }
 
-.container-grid .formula p input {
+.formula p input {
   border: none;
   outline: none;
   border-bottom: 2px solid #000;
 }
 
-.container-grid .resultado {
+.resultado {
   -ms-grid-row: 4;
   -ms-grid-column: 4;
   grid-area: Resultado;
 }
 
-.container-grid .resultado p {
+.resultado p {
   font-family: "Roboto", sans-serif;
   font-size: 1em;
   text-align: center;
   color: #f00;
 }
 
-.container-grid .figuraAModificar,
-.container-grid .aside,
-.container-grid .formula,
-.container-grid .resultado {
+.figuraAModificar,
+.aside,
+.formula,
+.resultado {
   border: 2px solid #000;
 }
 
@@ -156,5 +156,14 @@
           clip-path: circle(50% at 50% 50%);
   width: 200px;
   height: 200px;
+}
+
+@media screen and (max-width: 411px) {
+  .container-grid {
+    height: 100vh;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "Figura Figura" "Figura Figura" "Formula Resultado" "aside aside" "aside aside";
+  }
 }
 /*# sourceMappingURL=style-Areas.css.map */

@@ -36,6 +36,7 @@ $borde: 2px solid #000;
                          "Figura Figura  Figura aside"
                          "Formula Formula Formula Resultado";
     gap: 1em;
+    }
     .figuraAModificar{
         grid-area: Figura;
         display: grid;
@@ -44,7 +45,7 @@ $borde: 2px solid #000;
         justify-items: center;
         .figura{
             background-color: #808080;
-            transition: .6s clip-path;
+            transition: .6s clip-path ease-in-out .6s, .6s width ease-in, .6s height ease;
         }
     }
     .aside{
@@ -88,7 +89,7 @@ $borde: 2px solid #000;
     .resultado{
         border: $borde;
     }
-}
+
 // Figuras 
 .square{
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
@@ -114,4 +115,15 @@ $borde: 2px solid #000;
     clip-path: circle(50% at 50% 50%);
     width: 200px;
     height: 200px;
+}
+@media screen and (max-width: 411px) {
+    .container-grid{
+        height: 100vh;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "Figura Figura"
+                             "Figura Figura"
+                             "Formula Resultado"
+                             "aside aside"
+                             "aside aside";
+    }
 }
