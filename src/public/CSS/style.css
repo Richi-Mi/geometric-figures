@@ -6,7 +6,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow-x: scroll;
+    overflow: hidden;
 }
 /* content banner */
 .content-banner{
@@ -39,23 +39,6 @@
     color: var(--color);
     padding: .2em .5em;
 }
-.circles{
-    display: flex;
-    width: 50%;
-    height: 10%;
-    margin: .8em 0;
-    justify-content: space-evenly;
-}
-.circles .circle{
-    width: 1em;
-    height: 1em;
-    background-color: #fff;
-    border-radius: 50%;
-}
-.red{
-    background-color: #f00;
-}
-/* img */
 .img-banner{
     width: 300vw;
     height: 100%;
@@ -69,20 +52,11 @@
     z-index: 1;
     filter: contrast(2);
 }
-/* btn banner */
-.btn-banner{
-    position: absolute;
-    z-index: 1000;
-    background-color: rgba(255, 255, 255, 0.3);
-    height: 25%;
-    border: none;
-    outline: none;
-    color: var(--color);
-    font-size: 1.4em;
-}
-.btn-banner#btn-left{
-    left: 0;
-}
-.btn-banner#btn-right{
-    right: 0;
+@media screen and (max-width: 411px){
+    .banner{
+        height: 50vh;
+    }
+    .p-banner{
+        text-align: center;
+    }
 }
