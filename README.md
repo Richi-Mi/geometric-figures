@@ -7,6 +7,6 @@ Este Sitio Web lo hice como proyecto para mi portafolio personal. Y por desgraci
 4. Figuras.ejs
 
 **Proyecto Completado**
-![Image](src/public/figuras.png)
+![Image](https://github.com/Richi-Mi/geometric-figures/blob/master/src/public/img/figuras.png)
 
-![Image](src/public/about.png)
+![Image](https://github.com/Richi-Mi/geometric-figures/blob/master/src/public/img/about.png)
